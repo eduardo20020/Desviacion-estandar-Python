@@ -59,3 +59,9 @@ for i in range(len(labels)):
 dic_df = pd.DataFrame(dic)
 
 dic_df.to_csv("GruposFormados.csv", index=False)
+
+# Agrupa los usuarios por su grupo correspondiente
+grupos = dic_df.groupby('Grupo Correspondiente')['Usuario'].apply(list).reset_index()
+
+# Guarda los grupos en un nuevo archivo CSV
+grupos.to_csv('Agrupaciones.csv', index=False)
