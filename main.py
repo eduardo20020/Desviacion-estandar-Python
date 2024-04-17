@@ -19,6 +19,7 @@ for index, fila in encuestas.iterrows():
 x = np.array(vector)
 
 
+
 num_grupo = 1
 oper = True
 
